@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mis mascotas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1> Mis Mascotas Favoritas</h1>
+  </header>
+  <section>
+    <article>
+      <img src="gato.JPG" alt="gato esfinge" width="200">
+      <p>El gato esfinge es una raza sin pelaje, conocida por su carácter amigable y su apariencia única, fruto de una mutación genética natural. Aunque parece calvo, tiene una fina pelusa tipo gamuza, arrugas, orejas grandes y es conocido por ser extremadamente cariñoso, activo, inteligente y sociable.</p>
+    </article>
+    <article>
+      <img src="lobo.JPG" alt="lobo siberiano" width="200" />
+      <p>El lobo siberiano es un animal salvaje adaptado a las bajas temperaturas, con un pelaje grueso que le permite sobrevivir en ambientes extremos. Es muy inteligente y organizado, ya que vive en manadas donde cada miembro cumple un rol. Se destaca por su resistencia, su agilidad y su capacidad para trabajar en equipo durante la caza.</p>
+    </article>
+    <article>
+      <img src="tigre.JPG" alt="tigre" width="200" />
+      <p>El tigre es un animal salvaje fuerte y elegante, con gran capacidad de caza. Sus rayas lo ayudan a camuflarse en su entorno, y su fuerza y rapidez lo convierten en un depredador muy efectivo.</p>
+    </article>
+  </section>
+  <a href="index.html">volver al portafolio</a>
+</body>
+
+</html>
