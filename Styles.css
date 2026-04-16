@@ -11,6 +11,9 @@ body {
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #2e7d32;
   color: white;
   padding: 60px 20px;
@@ -27,8 +30,9 @@ body {
 
 .botones {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   gap: 15px;
 }
 
@@ -55,6 +59,14 @@ body {
   border-radius: 15px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+#mis-proyectos ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+
 
 input,
 textarea {
@@ -83,15 +95,17 @@ textarea {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  
 }
 
 .imag {
   background-color: #e6cfa8;
   padding: 20px;
   border-radius: 20px;
-  flex: 1 1 calc(50% - 20px);
-  max-width: calc(50% - 20px);
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
 }
+
 
 .imag img {
   width: 100%;
@@ -104,6 +118,27 @@ textarea {
   text-align: justify;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  background-color: #e6cfa8;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.grid p {
+  text-align: justify;
+}
+
+
 @media (max-width: 600px) {
   .imag {
     flex: 1 1 100%;
@@ -114,6 +149,13 @@ textarea {
     font-size: 28px;
   }
 }
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 a{
   text-decoration: none;
   color: #1b1b1b;
