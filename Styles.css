@@ -6,21 +6,27 @@
 
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #e6f4ea;
+  background-image: url("imagenes/body.jpeg");
+  width: 100%;
   color: black;
+  
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2e7d32;
+  background-image: url("imagenes/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 60px 20px;
   text-align: center;
   border-radius: 25px;
   margin: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5); 
 }
 
 .header h1 {
@@ -37,27 +43,34 @@ body {
 }
 
 .botones a {
-  text-decoration: none;
-  color: #1b1b1b;
-  background-color: #a5d6a7;
-  padding: 10px 18px;
+  background: rgba(37, 99, 235, 0.2);
+  color: white;
+  padding: 12px 20px;
   border-radius: 20px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
   transition: all 0.3s ease;
-  font-weight: 500;
 }
 
 .botones a:hover {
-  transform: translateY(-4px);
-  background-color: #66bb6a;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.7);
+  transform: scale(1.05);
 }
 
 .seccion {
-  background-color: white;
+  background-image: url("imagenes/body.jpeg");
+  background-repeat: no-repeat;
+  backdrop-filter: cover;
+  background-position: center;
   padding: 20px;
   margin: 20px;
   border-radius: 15px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 #mis-proyectos ul {
@@ -77,16 +90,25 @@ textarea {
 }
 
 .flax {
-  background-color: #2e7d32;
+  background-image: url("imagenes/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 60px 20px;
   text-align: center;
   border-radius: 25px;
   margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
 }
 
 .cuerpo {
-  background-color: white;
+  background-image: url("imagenes/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
   padding: 20px;
   margin: 20px auto;
   border-radius: 15px;
@@ -95,21 +117,29 @@ textarea {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
   
 }
 
 .imag {
-  background-color: #e6cfa8;
+  background-image: url("imagenes/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 20px;
   border-radius: 20px;
   flex: 1 1 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
 }
 
 
 .imag img {
   width: 100%;
-  height: auto;
+  height: 230px;
+  object-fit: cover;
   border-radius: 15px;
   margin-bottom: 15px;
 }
@@ -122,9 +152,14 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 10px;
-  background-color: #e6cfa8;
+  background-image: url("imagenes/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 20px;
   border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
 
 }
 .grid img {
@@ -156,20 +191,20 @@ textarea {
   }
 }
 
-a{
-  text-decoration: none;
-  color: #1b1b1b;
-  background-color: #a5d6a7;
-  padding: 10px 18px;
+a {
+  background: rgba(37, 99, 235, 0.2);
+  color: white;
+  padding: 12px 20px;
   border-radius: 20px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
   transition: all 0.3s ease;
-  font-weight: 500;
-  
 }
 
-a:hover{
-  transform: translateY(-4px);
-  background-color: #66bb6a;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  
+a:hover {
+  background: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.7);
+  transform: scale(1.05);
 }
