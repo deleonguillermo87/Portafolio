@@ -1,3 +1,22 @@
+/* Variables globales de color y tipografía */
+:root {
+  --color-oro: #d4a853;
+  --color-oro-claro: #f0c870;
+  --color-oro-oscuro: #a07830;
+  --color-oro-rgba: rgba(212, 168, 83, 0.08);
+  --color-oro-borde: rgba(212, 168, 83, 0.22);
+  --color-oro-hover: rgba(212, 168, 83, 0.18);
+  --color-fondo: #050508;
+  --color-texto: #e8e6e0;
+  --color-texto-suave: #c8c4bc;
+  --color-texto-opaco: #a09c94;
+  --fuente-principal: Georgia, serif;
+  --fuente-titulo: 2.5rem;
+  --fuente-subtitulo: 1.25rem;
+  --fuente-cuerpo: 0.9rem;
+  --fuente-pequena: 0.82rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +24,12 @@
 }
 
 body {
-  font-family: Georgia, serif;
-  background-color: #050508;
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
   background-image:
     radial-gradient(ellipse 80% 50% at 20% -10%, rgba(212,168,83,0.07) 0%, transparent 60%),
     radial-gradient(ellipse 60% 40% at 80% 110%, rgba(59,123,255,0.06) 0%, transparent 55%);
-  color: #e8e6e0;
+  color: var(--color-texto);
   width: 100%;
   min-height: 100vh;
   line-height: 1.65;
@@ -40,18 +59,25 @@ body {
   position: absolute;
   top: 0; left: 52px; right: 52px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #d4a853, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-oro), transparent);
   opacity: 0.5;
 }
 
 .header h1 {
-  font-family: Georgia, serif;
-  font-size: 40px;
+  font-family: var(--fuente-principal);
+  font-size: var(--fuente-titulo);
   font-weight: 900;
-  background: linear-gradient(135deg, #f0c870 0%, #d4a853 50%, #a07830 100%);
+  background: linear-gradient(135deg, var(--color-oro-claro) 0%, var(--color-oro) 50%, var(--color-oro-oscuro) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos comunes para botones y enlaces de navegación */
+.botones,
+button {
   position: relative;
   z-index: 1;
 }
@@ -62,24 +88,22 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  position: relative;
-  z-index: 1;
 }
 
 .botones a {
-  background: rgba(212,168,83,0.08);
-  color: #f0c870;
+  background: var(--color-oro-rgba);
+  color: var(--color-oro-claro);
   padding: 12px 20px;
   border-radius: 20px;
   text-decoration: none;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(212,168,83,0.22);
+  border: 1px solid var(--color-oro-borde);
   box-shadow: 0 4px 15px rgba(212,168,83,0.1);
   transition: all 0.3s ease;
 }
 
 .botones a:hover {
-  background: rgba(212,168,83,0.18);
+  background: var(--color-oro-hover);
   border-color: rgba(212,168,83,0.55);
   box-shadow: 0 6px 20px rgba(212,168,83,0.25);
   transform: scale(1.05);
@@ -98,9 +122,9 @@ body {
 }
 
 .seccion h3 {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  color: #d4a853;
+  font-family: var(--fuente-principal);
+  font-size: var(--fuente-subtitulo);
+  color: var(--color-oro);
   margin-bottom: 14px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(212,168,83,0.15);
@@ -112,13 +136,13 @@ body {
   position: absolute;
   bottom: -1px; left: 0;
   width: 40px; height: 1px;
-  background: #d4a853;
-  box-shadow: 0 0 8px #d4a853;
+  background: var(--color-oro);
+  box-shadow: 0 0 8px var(--color-oro);
 }
 
 .seccion p {
-  color: #c8c4bc;
-  font-size: 14.5px;
+  color: var(--color-texto-suave);
+  font-size: var(--fuente-cuerpo);
   font-weight: 300;
   line-height: 1.8;
 }
@@ -136,8 +160,8 @@ body {
   border: 1px solid rgba(212,168,83,0.15);
   border-radius: 16px;
   padding: 20px 22px;
-  font-size: 14px;
-  color: #c8c4bc;
+  font-size: var(--fuente-cuerpo);
+  color: var(--color-texto-suave);
   transition: all 0.25s ease;
   line-height: 1.75;
 }
@@ -149,6 +173,21 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
+#bienvenidos{
+  background: linear-gradient(135deg, rgba(20,18,14,0.85), rgba(13,13,20,0.9));
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(212,168,83,0.15);
+  box-shadow: 0 4px 30px rgba(212,168,83,0.05);
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Estilos comunes para inputs y textarea */
 input,
 textarea {
   width: 100%;
@@ -157,8 +196,8 @@ textarea {
   border-radius: 12px;
   border: 1px solid rgba(212,168,83,0.15);
   background: rgba(255,255,255,0.03);
-  color: #e8e6e0;
-  font-size: 14px;
+  color: var(--color-texto);
+  font-size: var(--fuente-cuerpo);
   outline: none;
   transition: all 0.2s ease;
   box-sizing: border-box;
@@ -180,9 +219,9 @@ button {
   border-radius: 50px;
   border: 1px solid rgba(212,168,83,0.35);
   background: linear-gradient(135deg, rgba(212,168,83,0.15), rgba(212,168,83,0.08));
-  color: #f0c870;
+  color: var(--color-oro-claro);
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--fuente-cuerpo);
   cursor: pointer;
   transition: all 0.28s ease;
 }
@@ -215,15 +254,15 @@ button:hover {
   position: absolute;
   top: 0; left: 52px; right: 52px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #d4a853, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-oro), transparent);
   opacity: 0.5;
 }
 
 .flax h1 {
-  font-family: Georgia, serif;
-  font-size: 40px;
+  font-family: var(--fuente-principal);
+  font-size: var(--fuente-titulo);
   font-weight: 900;
-  background: linear-gradient(135deg, #f0c870 0%, #d4a853 50%, #a07830 100%);
+  background: linear-gradient(135deg, var(--color-oro-claro) 0%, var(--color-oro) 50%, var(--color-oro-oscuro) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -267,9 +306,11 @@ button:hover {
   box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(212,168,83,0.08);
 }
 
+/* Imágenes responsivas */
 .imag img {
   width: 100%;
-  height: 230px;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 15px;
@@ -283,8 +324,8 @@ button:hover {
 
 .imag p {
   text-align: justify;
-  font-size: 13px;
-  color: #a09c94;
+  font-size: var(--fuente-pequena);
+  color: var(--color-texto-opaco);
   line-height: 1.75;
 }
 
@@ -308,8 +349,10 @@ button:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 
+/* Imágenes responsivas */
 .grid img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 15px;
   margin-bottom: 15px;
@@ -323,38 +366,67 @@ button:hover {
 
 .grid p {
   text-align: justify;
-  font-size: 13.5px;
-  color: #a09c94;
+  font-size: var(--fuente-pequena);
+  color: var(--color-texto-opaco);
   line-height: 1.8;
 }
 
 a {
-  background: rgba(212,168,83,0.08);
-  color: #f0c870;
+  background: var(--color-oro-rgba);
+  color: var(--color-oro-claro);
   padding: 12px 22px;
   border-radius: 20px;
   text-decoration: none;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(212,168,83,0.22);
+  border: 1px solid var(--color-oro-borde);
   box-shadow: 0 4px 15px rgba(212,168,83,0.1);
   transition: all 0.3s ease;
 }
 
 a:hover {
-  background: rgba(212,168,83,0.18);
+  background: var(--color-oro-hover);
   border-color: rgba(212,168,83,0.55);
   box-shadow: 0 6px 20px rgba(212,168,83,0.25);
   transform: scale(1.05);
 }
 
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+/* Móviles — pantallas pequeñas (max 600px) */
 @media (max-width: 600px) {
-  .imag {
-    flex: 1 1 100%;
-    max-width: 100%;
+
+  /* Menú de navegación en columna */
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 
   .header h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
+  }
+
+  .botones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Proyectos en 1 columna */
+  #mis-proyectos ul {
+    grid-template-columns: 1fr;
+  }
+
+  /* Galería de imágenes en 2 columnas */
+  .cuerpo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imag {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .grid {
@@ -362,3 +434,36 @@ a:hover {
   }
 }
 
+/* Tablets — pantallas medianas (601px a 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  /* Proyectos en 2 columnas */
+  #mis-proyectos ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Galería en 3 columnas */
+  .cuerpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .imag {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Escritorio — pantallas grandes (más de 900px) */
+@media (min-width: 901px) {
+
+  /* Mantener layout de 3 columnas */
+  #mis-proyectos ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .imag {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
